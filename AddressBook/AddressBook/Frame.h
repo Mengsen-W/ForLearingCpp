@@ -6,6 +6,7 @@
 #include "showMenu.h"
 #include "showPerson.h"
 #include "isExist.h"
+#include "deletePerson.h"
 
 using namespace std;
 //用于显示用户菜单
@@ -23,3 +24,5 @@ void showPerson(const Addressbooks*);
 //用于检查联系人是否存在
 int isExist(Addressbooks *, string);
 
+//删除联系人
+void deletePerson(Addressbooks*);

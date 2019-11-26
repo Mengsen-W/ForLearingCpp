@@ -35,10 +35,10 @@ void addPerson(Addressbooks* abs) {
 			cout << "输入有误请重新输入" << endl;
 		}
 		// 年龄
-		cout << "请输入年龄 ：" << endl;
 		int age = 0;
 		while (true)
 		{
+			cout << "请输入年龄 ：" << endl;
 			cin >> age;
 			if (age > 0 && age < 150)
 			{
