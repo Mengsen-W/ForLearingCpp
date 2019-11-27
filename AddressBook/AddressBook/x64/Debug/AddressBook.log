@@ -1,2 +1,12 @@
 ﻿  addPerson.cpp
+  AddressBook.cpp
+  deletePerson.cpp
+  findPerson.cpp
+  Frame.cpp
+  isExist.cpp
+  modPerson.cpp
+  showMenu.cpp
+  showPerson.cpp
+  正在编译...
+  正在生成代码...
   AddressBook.vcxproj -> E:\Code\Git_Code\AddressBook\x64\Debug\AddressBook.exe

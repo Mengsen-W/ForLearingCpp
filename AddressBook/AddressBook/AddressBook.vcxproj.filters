@@ -36,6 +36,12 @@
     <ClCompile Include="deletePerson.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="findPerson.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="modPerson.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Frame.h">
@@ -57,6 +63,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="deletePerson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="findPerson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modPerson.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

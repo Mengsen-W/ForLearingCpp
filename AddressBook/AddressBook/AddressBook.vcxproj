@@ -126,8 +126,10 @@
     <ClCompile Include="addPerson.cpp" />
     <ClCompile Include="AddressBook.cpp" />
     <ClCompile Include="deletePerson.cpp" />
+    <ClCompile Include="findPerson.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="isExist.cpp" />
+    <ClCompile Include="modPerson.cpp" />
     <ClCompile Include="showMenu.cpp" />
     <ClCompile Include="showPerson.cpp" />
   </ItemGroup>
@@ -135,8 +137,10 @@
     <ClInclude Include="addPerson.h" />
     <ClInclude Include="Address.h" />
     <ClInclude Include="deletePerson.h" />
+    <ClInclude Include="findPerson.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="isExist.h" />
+    <ClInclude Include="modPerson.h" />
     <ClInclude Include="showMenu.h" />
     <ClInclude Include="showPerson.h" />
   </ItemGroup>
