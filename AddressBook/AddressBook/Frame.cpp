@@ -31,7 +31,7 @@ void Frame(int* s, Addressbooks* pabs) {
 	{
 		//清空联系人
 		delete pabs;
-		cout << "清楚联系人成功" << endl;
+		cout << "清除联系人成功" << endl;
 		system("pause");
 		system("cls");
 		break;
