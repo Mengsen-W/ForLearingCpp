@@ -7,6 +7,7 @@ class MyInt
 {
 public:
 	MyInt();
+	MyInt(int);
 	~MyInt();
 	MyInt(const MyInt&);
 	MyInt& operator=(MyInt& p);
@@ -14,6 +15,6 @@ public:
 	MyInt& operator--();
 protected:
 private:
-	int m_Num;
+	int* m_Num;
 };
 
