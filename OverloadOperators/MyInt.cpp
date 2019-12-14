@@ -23,13 +23,13 @@ MyInt::MyInt(const MyInt& temp)
 }
 
 //重载赋值符号
-MyInt& MyInt::operator=(MyInt& p)
+MyInt& MyInt::operator=(const MyInt& p)
 {
 	{
-		if (m_Num != NULL)
+		if (this->m_Num != NULL)
 		{
-			delete m_Num;
-			m_Num = NULL;
+			delete this->m_Num;
+			this->m_Num = NULL;
 		}
 		this->m_Num = new int(*p.m_Num);
 		return *this;
@@ -51,8 +51,49 @@ MyInt::~MyInt()
 //前置自增
 MyInt& MyInt::operator++()
 {
-	m_Num = m_Num + 1;
+	*m_Num = *m_Num + 1;
 	return *this;
 }
 
 //前置自减
+MyInt& MyInt::operator--()
+{
+	*m_Num = *m_Num - 1;
+	return *this;
+}
+
+//重载后置自增
+MyInt MyInt::operator++(int) {
+	MyInt temp = *(this->m_Num);
+	m_Num++;
+	return temp;
+}
+
+//重载后置自减
+MyInt MyInt::operator--(int) {
+	MyInt temp = *(this->m_Num);
+	m_Num--;
+	return temp;
+}
+
+
+//重载加等于
+MyInt& MyInt::operator+=(const MyInt& temp) {
+	*(this->m_Num) += *(temp.m_Num);
+	return *this;
+}
+
+//重载减等于
+MyInt& MyInt::operator-=(const MyInt& temp) {
+	*(this->m_Num) -= *(temp.m_Num);
+	return *this;
+}
+
+//重载值判断运算符
+bool operator==(MyInt);
+
+//重载与运算符
+
+//重载或运算符
+
+//重载函数运算符
