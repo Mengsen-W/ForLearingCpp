@@ -26,7 +26,25 @@ public:
 	MyInt& operator=(const MyInt&);
 
 	//重载加法运算符
-	friend MyInt operator+(const MyInt&, int);
+	friend MyInt& operator+(const MyInt&, int);
+	friend MyInt& operator+(int, const MyInt&);
+	MyInt& operator+(const MyInt&);
+
+	//重载减法运算符
+	friend MyInt& operator-(const MyInt&, int);
+	friend MyInt& operator-(int, const MyInt&);
+	MyInt& operator-(const MyInt&);
+
+	//重载乘法运算符
+	friend MyInt& operator*(const MyInt&, int);
+	friend MyInt& operator*(int, const MyInt&);
+	MyInt& operator*(const MyInt&);
+
+	//重载除法运算符
+	friend MyInt& operator/(const MyInt&, int);
+	friend MyInt& operator/(int, const MyInt&);
+	MyInt& operator/(const MyInt&);
+
 	//重载前置自增
 	MyInt& operator++();
 
