@@ -24,26 +24,27 @@ public:
 
 	//重载等于
 	MyInt& operator=(const MyInt&);
+	MyInt operator=(int);
 
 	//重载加法运算符
-	friend MyInt& operator+(const MyInt&, int);
-	friend MyInt& operator+(int, const MyInt&);
-	MyInt& operator+(const MyInt&);
+	//friend MyInt operator+(const MyInt&, int);
+	friend MyInt operator+(int, const MyInt&);
+	MyInt operator+(const MyInt&);
 
 	//重载减法运算符
-	friend MyInt& operator-(const MyInt&, int);
-	friend MyInt& operator-(int, const MyInt&);
-	MyInt& operator-(const MyInt&);
+	//friend MyInt operator-(const MyInt&, int);
+	friend MyInt operator-(int, const MyInt&);
+	MyInt operator-(const MyInt&);
 
 	//重载乘法运算符
-	friend MyInt& operator*(const MyInt&, int);
-	friend MyInt& operator*(int, const MyInt&);
-	MyInt& operator*(const MyInt&);
+	//friend MyInt operator*(const MyInt&, int);
+	friend MyInt operator*(int, const MyInt&);
+	MyInt operator*(const MyInt&);
 
 	//重载除法运算符
-	friend MyInt& operator/(const MyInt&, int);
-	friend MyInt& operator/(int, const MyInt&);
-	MyInt& operator/(const MyInt&);
+	//friend MyInt operator/(const MyInt&, int);
+	friend MyInt operator/(int, const MyInt&);
+	MyInt operator/(const MyInt&);
 
 	//重载前置自增
 	MyInt& operator++();
@@ -64,13 +65,24 @@ public:
 	MyInt& operator-=(const MyInt&);
 
 	//重载值判断运算符
-	bool operator==(MyInt);
+	bool operator==(const MyInt&) const;
+	friend bool operator==(int&,const MyInt &);
+	friend bool operator==(const MyInt&, int&);
 
 	//重载与运算符
-
+	friend bool operator&&(const MyInt&, int&);
+	friend bool operator&&(int&, const MyInt&);
+	bool operator&&(const MyInt&) const;
 	//重载或运算符
+	friend bool operator||(const MyInt&, int&);
+	friend bool operator||(int&, const MyInt&);
+	bool operator||(const MyInt&) const;
 
 	//重载函数运算符
+	void operator()(const MyInt&) const;
+
+	//重载左移运算符
+	friend ostream& operator<<(ostream&, const MyInt&);
 
 protected:
 private:
