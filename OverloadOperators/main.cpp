@@ -5,6 +5,7 @@
 #include <iostream>
 #include "MyInt.h"
 
+using namespace std;
 int main() {
 	int val1 = 0;
 	int val2 = 1;
@@ -24,6 +25,7 @@ int main() {
 	cout << --myInt2 << endl;
 	cout << myInt2 << endl;
 	myInt4(myInt1);
+
 	cout << myInt1 * myInt2 << endl;
 	cout << myInt2 * myInt4 << endl;
 	cout << myInt2 * 10 << endl;
@@ -31,9 +33,9 @@ int main() {
 	cout << 0 * myInt2 << endl;
 
 	cout << myInt1 / myInt2 << endl;
-	cout << myInt2 / 0 << endl;
-	//cout << myInt4 / myInt2 << endl;
-	//cout << myInt4 / 2 << endl;
+	cout << myInt4 / myInt2 << endl;
+	cout << myInt4 / 2 << endl;
+	cout << 50 / myInt4 << endl;
 
 	return 0;
 }

@@ -137,39 +137,14 @@ MyInt MyInt::operator*(const MyInt& temp1) {
 
 MyInt operator/(int val, const MyInt& temp1) {
 	MyInt temp;
-	if (*(temp1.m_Num) == 0) {
-		cout << "/0?" << endl;
-		*(temp.m_Num) = NULL;
-		return temp;
-	}
-	else {
-		if (val == 0) {
-			(temp.m_Num) = 0;
-			return temp;
-		}
-		else {
-			*(temp.m_Num) = val / *(temp.m_Num);
-			return temp;
-		}
-	}
+	*(temp.m_Num) = val / *(temp1.m_Num);
+	return temp;
 }
+
 MyInt MyInt::operator/(const MyInt& temp1) {
 	MyInt temp;
-	if (*(temp1.m_Num) == 0) {
-		cout << "/0?" << endl;
-		*(temp.m_Num) = 0;
-		return temp;
-	}
-	else {
-		if (*(temp.m_Num) == 0) {
-			*(temp.m_Num) = 0;
-			return temp;
-		}
-		else {
-			*(temp.m_Num) = *(temp.m_Num) / *(temp.m_Num);
-			return temp;
-		}
-	}
+	*(temp.m_Num) = *(this->m_Num) / *(temp1.m_Num);
+	return temp;
 }
 
 //Ç°ÖÃ×ÔÔö
