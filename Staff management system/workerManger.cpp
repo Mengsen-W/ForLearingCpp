@@ -8,6 +8,7 @@ WorkerManger::~WorkerManger()
 {
 }
 
+// 显示菜单
 void WorkerManger::Show_Menu() {
 
 	std::cout << "*******************************************" << std::endl;
@@ -22,4 +23,11 @@ void WorkerManger::Show_Menu() {
 	std::cout << "************* 7. 清空所有文档 **************" << std::endl;
 	std::cout << "*******************************************" << std::endl;
 	std::cout << std::endl;
+}
+
+// 推出系统
+void WorkerManger::exitSystem() {
+	std::cout << "欢迎下次使用" << std::endl;
+	system("pause");
+	exit(0);
 }
