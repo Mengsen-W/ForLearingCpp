@@ -68,6 +68,7 @@ void WorkerManger::Add_Emp() {
 			cin >> id;
 			cout << "请输入第 " << (i + 1) << " 个新职工的姓名" << endl;
 			cin >> name;
+
 			cout << "请选择该职工的岗位：" << endl;
 			cout << "1. 普通职工" << endl;
 			cout << "2. 经理" << endl;
@@ -112,4 +113,21 @@ void WorkerManger::Add_Emp() {
 	system("pause");
 	system("cls");
 
+}
+
+WorkerManger::~WorkerManger()
+{
+	if (this->m_EmpArray != NULL)
+	{
+		for (int i = 0; i < this->m_EmpNum; i++)
+		{
+			if (this->m_EmpArray[i] != NULL)
+			{
+				delete this->m_EmpArray[i];
+			}
+		}
+
+		delete[] this->m_EmpArray;
+		this->m_EmpArray = NULL;
+	}
 }
