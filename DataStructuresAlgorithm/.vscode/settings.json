@@ -9,5 +9,6 @@
         "expon",
         "rehashs",
         "sets"
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
 }
