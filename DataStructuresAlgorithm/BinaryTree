@@ -1,0 +1,119 @@
+/*
+ * @Author: Mengsen.Wang
+ * @Date: 2020-01-26 20:20:07
+ * @Last Modified by: Mengsen.Wang
+ * @Last Modified time: 2020-01-26 20:53:51
+ */
+
+// 前序遍历非递归
+
+void preOrderNR(){
+    // 先把根节点压入栈
+    Stack<Node> stack=new Stack();
+    stack.push(root);
+    while (!stack.isEmpty())    // 判断栈是否为空，为空即意味着上一步窜入错误
+    {
+        // 把父节点弹出去，用于寻找其他子节点
+        Node cur=stack.pop();
+        printf(cur->element);
+        // 有孩子在下面
+        if (cur -> right!=null)
+        stack.push(cur.right);
+        if(cur->left!=null)
+        stack.push(cur->left);
+    }
+}
+/*
+    先把栈底弹出来，判断左右孩子的情况
+    每次进入前先弹出栈底
+*/
+
+// 先序遍历递归
+void PreOrder(BiTree T){
+	if(T){
+        print(T);
+		PreOrder(T->lchild);
+		PreOrder(T->rchild);//这里的压栈，只是为了再一次调用上面的函数
+	}
+
+
+}
+
+// 中序遍历递归
+preorderTraversal(TreeNode* root) {
+      if(root !=NULL){
+         inorderTraversal(root->left);
+         print(root->val);
+         inorderTraversal(root->right);
+        }
+    }
+
+// 中序遍历非递归
+   vector<int> preorderTraversal(TreeNode* root) {
+        vector<int>v;
+        stack<TreeNode *> s;
+	    TreeNode *cur = root;
+
+	    while (cur != NULL || !s.empty()) {
+		    while (cur != NULL) {
+			    s.push(cur);
+			    cur = cur->left;
+		    }
+		    s.pop();
+            vprint(top->val);
+		    cur = top->right;
+        }
+        return v;
+    }
+
+// 后续遍历递归
+preorderTraversal(TreeNode* root) {
+      if(root !=NULL){
+         inorderTraversal(root->left);
+         inorderTraversal(root->right);
+         print(root);
+        }
+    }
+
+
+// 后续遍历非递归实现
+void postOrder_stack(BiTree T){
+    printf("\n非递归后序遍历结果:\n");
+    initStack(&sqStack);
+    BiTree p=T,l;//l用于保存最近一次pop出的节点
+    push(&sqStack,p);
+    while(!stackEmpty(sqStack)){
+        getTop(&sqStack,&p);
+        if(p->lchild!=NULL){
+            if(l!=p->lchild&&l!=p->rchild){//若左右子节点均未被访问过，推入左子节点
+                push(&sqStack,p->lchild);
+            }
+            else if(l==p->lchild){//左子节点访问过，若右子节点非空，则压入右子节点，否则，输出
+                if(p->rchild!=NULL)
+                    push(&sqStack,p->rchild);
+                else if(p->rchild==NULL){
+                    pop(&sqStack,&l);
+                    printf("%d ",l->data);
+                }
+            }
+            else if(l==p->rchild){//右子节点访问过，则左右子节点均访问完，弹出当前节点
+                pop(&sqStack,&l);
+                printf("%d ",l->data);
+            }
+        }
+        else if(p->lchild==NULL){
+            if(p->rchild==NULL){//左右子节点为空，则直接弹出，弹出节点保存在l中
+                pop(&sqStack,&l);
+                printf("%d ",l->data);
+            }
+            else if(p->rchild!=NULL){
+                    if(l==p->rchild){//右子节点访问过，则左右子节点均访问完，弹出当前节点
+                    pop(&sqStack,&l);
+                    printf("%d ",l->data);
+                }else if(l!=p->rchild){
+                    push(&sqStack,p->rchild);
+                }
+            }
+        }
+    }
+}

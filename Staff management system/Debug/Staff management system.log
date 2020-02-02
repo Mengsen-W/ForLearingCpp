@@ -1,9 +1,0 @@
-﻿  boss.cpp
-  employee.cpp
-  main.cpp
-  manger.cpp
-  WorkerManger.cpp
-  正在编译...
-  正在生成代码...
-  Staff management system.vcxproj -> E:\Code\Git_C++\Staff management system\Debug\Staff management system.exe
-E:\Code\Git_C++\Staff management system\WorkerManger.cpp(93): warning C6386: 写入到“newSpace”时缓冲区溢出: 可写大小为“newSize*4”个字节，但可能写入了“8”个字节。
