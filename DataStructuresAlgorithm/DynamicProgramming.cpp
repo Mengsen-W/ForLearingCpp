@@ -2,7 +2,7 @@
  * @Author: Mengsen.Wang
  * @Date: 2020-02-03 14:48:07
  * @Last Modified by: Mengsen.Wang
- * @Last Modified time: 2020-02-03 17:42:13
+ * @Last Modified time: 2020-02-03 19:28:10
  */
 
 #include <vector>
@@ -97,6 +97,40 @@ void optMatrix(const vector<int> &c, vector<vector<int> > &m,
     }
 }
 
+/**
+ * 计算所有点对的路径
+ * a 包含邻接矩阵
+ * a[i][i] 假设为0
+ * d 包含最短路径的值
+ * 顶点从 0 开始编号
+ * 所有的数组维数相等
+ * 如果 d[i][i] 置为负值，则负值圈存在
+ * 具体路径可以用 path[][] 来计算
+ * NOT_A_VERTES 为 -1
+ */
+void allPairs(const vector<vector<int> > &a, vector<vector<int> > &d,
+              vector<vector<int> > &path) {
+  static const int NOT_A_VERTES = -1;
+  int n = a.size();
+
+  // 初始化 d 和 path
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
+      d[i][j] = a[i][j];
+      path[i][j] = NOT_A_VERTES;
+    }
+  }
+  for (int k = 0; k < n; ++k) {
+    // 把每个顶点看作为一个中间节点
+    for (int i = 0; i < n; ++i)
+      for (int j = 0; j < n; ++j)
+        if (d[i][k] + d[k][j] < d[i][j]) {
+          // 更新最短路径
+          d[i][j] = d[i][k] + d[k][j];
+          path[i][j] = k;
+        }
+  }
+}
 int main() {
   int a = 10;
   return 0;

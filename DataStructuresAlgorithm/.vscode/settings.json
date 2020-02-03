@@ -3,12 +3,15 @@
         "mengsen"
     ],
     "cSpell.ignoreWords": [
+        "a",
         "allowed",
         "coef",
         "disj",
         "expon",
+        "not",
         "rehashs",
-        "sets"
+        "sets",
+        "vertes"
     ],
     "C_Cpp.errorSquiggles": "Disabled"
 }
