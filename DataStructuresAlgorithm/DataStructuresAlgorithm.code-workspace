@@ -12,7 +12,9 @@
 			"cmath": "cpp",
 			"type_traits": "cpp",
 			"unordered_map": "cpp",
-			"functional": "cpp"
+			"functional": "cpp",
+			"*.tcc": "cpp",
+			"list": "cpp"
 		}
 	}
 }
