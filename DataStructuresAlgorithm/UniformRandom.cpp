@@ -2,7 +2,7 @@
  * @Author: Mengsen.Wang
  * @Date: 2020-02-03 21:34:19
  * @Last Modified by: Mengsen.Wang
- * @Last Modified time: 2020-02-03 21:54:11
+ * @Last Modified time: 2020-02-05 14:14:15
  */
 
 #include <chrono>
@@ -44,4 +44,4 @@ class UniformRandom {
   mt19937 generator;
 };
 
-int main() { return 0; }
+// int main() { return 0; }

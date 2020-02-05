@@ -11,6 +11,8 @@
         "not",
         "rehashs",
         "sets",
+        "treap",
+        "tree",
         "vertes"
     ],
     "C_Cpp.errorSquiggles": "Disabled"
